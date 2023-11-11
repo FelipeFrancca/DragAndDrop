@@ -14,7 +14,7 @@ columns.forEach((item) => {
         const applyAfter = getNewPosition(item, e.clientY);
 
         if (applyAfter) {
-            applyAfter.insertAdjacentElment('afterend', dragging);
+            applyAfter.insertAdjacentElement('afterend', dragging);
         } else {
             item.prepend(dragging);
         }
@@ -22,7 +22,7 @@ columns.forEach((item) => {
 });
 
 function getNewPosition(column, posY) {
-    const cards = column.querySelectorAll('.item:not(.dragging)');
+    const cards = column.querySelectorAll('.itens:not(.dragging)');
     let result;
 
     for (let refer_card of cards) {
